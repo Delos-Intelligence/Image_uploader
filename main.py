@@ -5,7 +5,7 @@ import os
 import replicate
 import numpy as np
 
-os.environ['REPLICATE_API_TOKEN'] = st.secrets["REPLICATE_API_TOKEN"]
+os.environ['REPLICATE_API_TOKEN'] = st.secrets["REPLICATE_API_KEY"]
 
 def traitement(image, prompt):
 
