@@ -5,7 +5,6 @@ import os
 import replicate
 import numpy as np
 
-os.environ['REPLICATE_API_TOKEN'] = st.secrets["REPLICATE_API_KEY"]
 
 def traitement(image, prompt):
 
@@ -15,9 +14,11 @@ def traitement(image, prompt):
 
     image_bytes.seek(0)
 
-    output = replicate.run(
+    model = replicate.Client(api_token = st.secrets["REPLICATE_API_KEY"])
+
+    output = model.run(
         "daanelson/minigpt-4:b96a2f33cc8e4b0aa23eacfce731b9c41a7d9466d9ed4e167375587b54db9423",
-        input={"image": image_bytes, "prompt":prompt}
+        input={"image": image_bytes, "prompt":prompt},
     )
     print(output)
     return output
