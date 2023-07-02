@@ -16,6 +16,7 @@ import replicate
 def traitement(image, prompt):
 
     image_bytes = io.BytesIO()
+    image = image.convert('RGB')
     image.save(image_bytes, format='JPEG')  # Vous pouvez spécifier le format souhaité (JPEG, PNG, etc.)
 
     image_bytes.seek(0)
