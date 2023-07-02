@@ -1,2 +1,2 @@
-replicate
-pydantic
+replicate==0.8.3
+pydantic==1.10.0
