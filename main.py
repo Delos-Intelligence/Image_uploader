@@ -5,13 +5,7 @@ import os
 import replicate
 import numpy as np
 
-os.environ['REPLICATE_API_TOKEN'] = 'r8_OhJtaBPrqTJiw1KQB7BmawhcdBO5kJJ0dKYna'
-
-import streamlit as st
-from PIL import Image
-import io
-import numpy as np
-import replicate
+os.environ['REPLICATE_API_TOKEN'] = st.secrets["REPLICATE_API_TOKEN"]
 
 def traitement(image, prompt):
 
