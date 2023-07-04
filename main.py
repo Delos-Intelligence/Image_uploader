@@ -23,7 +23,7 @@ def traitement(image, prompt):
     print(output)
     return output
 
-st.title("🩻 Med Pic Analyzer")
+st.title("🩻 Medpic Analyzer")
 
 uploaded_file = st.file_uploader("Drop une image ici", type=["jpg", "png", "jpeg"])
 prompt = st.text_input("Entrez votre question ici")
